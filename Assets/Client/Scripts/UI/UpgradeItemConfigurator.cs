@@ -32,6 +32,7 @@ namespace Client.UI
 
         private void SetData(IUpgradeStaticData staticData)
         {
+            upgradeLevelSlider.maxValue = staticData.MaxLevel;
             upgradeLevelSlider.value = _upgradable.ReturnRealLevel();
             if (upgradeLevelSlider.value == upgradeLevelSlider.maxValue)
             {
@@ -46,7 +47,6 @@ namespace Client.UI
             Title.text = staticData.Title;
             Description.text = staticData.Description;
 
-            upgradeLevelSlider.maxValue = staticData.MaxLevel;
         }
 
         public void BuyUpgrade()

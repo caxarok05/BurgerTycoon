@@ -49,7 +49,7 @@ namespace Client.Units.Cashier
                 await Task.Yield(); 
             }
 
-            if (table._cookedDishes > oneTimeDishTaken)
+            if (table._cookedDishes >= oneTimeDishTaken)
                 table._cookedDishes -= oneTimeDishTaken;
 
             UpdateDeliveryProgress(1f);

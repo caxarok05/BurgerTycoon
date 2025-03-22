@@ -29,7 +29,6 @@ namespace Client.Units.Cashier.StateMachine
 
         public async void ReachOrderPointTable()
         {
-            Debug.Log("Order");
 
             _cashier.destinationTracker.OnDestinationReached -= ReachOrderPointTable;
             _cashier.gameObject.transform.LookAt(_orderPlace.CashierlookAtPoint);

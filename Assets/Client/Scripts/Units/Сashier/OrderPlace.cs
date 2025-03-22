@@ -59,7 +59,7 @@ namespace Client.Units.Cashier
 
                 foreach (ChefTable table in destinationTables)
                 {
-                    if (!table.isOccupiedbyCashier && table._cookedDishes < table._maxIngridients)
+                    if (!table.isOccupiedbyCashier)
                     {
                         availableTable = table;
                         break;
@@ -84,20 +84,17 @@ namespace Client.Units.Cashier
                 {
                     foreach (ChefTable table in destinationTables)
                     {
-                        if (table._cookedDishes < table._maxIngridients)
+                        if (cashier.hasWeight)
                         {
-                            if (cashier.hasWeight)
-                            {
-                                stateMachine.Enter<GiveOrderState>();
-                            }
-                            else
-                            {
-                                stateMachine.Enter<TakeOrderState, ChefTable>(table);
-                                table.isOccupiedbyCashier = true;
-                            }
-                            cashier.isFree = false;
-                            break;
+                            stateMachine.Enter<GiveOrderState>();
                         }
+                        else
+                        {
+                            stateMachine.Enter<TakeOrderState, ChefTable>(table);
+                            table.isOccupiedbyCashier = true;
+                        }
+                        cashier.isFree = false;
+                        break;
                     }
                 }
             }

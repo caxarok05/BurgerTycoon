@@ -41,7 +41,7 @@ namespace Client.Infrastructure.Factory
         private BurgerCostUpgrade _burgerUpgrade;
         private GameObject navMesh;
 
-        private const float BurgerUpgradeCost = 1.3f;
+        private const float BurgerUpgradeCost = 1.1f;
 
         public GameFactory(IAssetProvider assets, IPersistentProgressService persistentProgress, 
             IMoneyService moneyService, IStaticDataService staticData)
@@ -59,7 +59,9 @@ namespace Client.Infrastructure.Factory
             _cratePoints = restaraunt.GetComponent<SpawnPointsData>().loaderPoints;
             _orderPoints = restaraunt.GetComponent<SpawnPointsData>().orderPoints;
             customerPoints = restaraunt.GetComponent<SpawnPointsData>().customerPoints;
+            
             return restaraunt;
+
         }
 
         public void CreateChefTable()
@@ -157,12 +159,15 @@ namespace Client.Infrastructure.Factory
             orderPlace.GetComponent<OrderPlace>().Construct(table, cashier.GetComponent<CashierBehaviour>(), _moneyService);
             UpdateNavMesh();
         }
-
+        
         public void UpgradeBurgers()
         {
             foreach (var burger in cashierPoints)
             {
-                burger.GetComponent<OrderPlace>().BurgerPrice = (int)(burger.GetComponent<OrderPlace>().BurgerPrice * BurgerUpgradeCost); 
+                for (int i = 0; i < _persistentProgressService.Progress.upgradeData.burgerUpgrade.UpgradeLevel; i++)
+                {
+                    burger.GetComponent<OrderPlace>().BurgerPrice = (int)(burger.GetComponent<OrderPlace>().BurgerPrice * BurgerUpgradeCost); 
+                }
             }
         }
 
@@ -190,10 +195,27 @@ namespace Client.Infrastructure.Factory
         {
             var hud = _assets.Instantiate(AssetPath.HudPath);
             var content = hud.GetComponent<HudVariables>().content;
-            CreateUpgradeItem(_persistentProgressService.Progress.upgradeData.chefUpgrade.UpgradeLevel + 1,"Chef", content);
-            CreateUpgradeItem(_persistentProgressService.Progress.upgradeData.loaderUpgrade.UpgradeLevel + 1, "Loader", content);
-            CreateUpgradeItem(_persistentProgressService.Progress.upgradeData.cashierUpgrade.UpgradeLevel + 1, "Cashier", content);
-            CreateUpgradeItem(_persistentProgressService.Progress.upgradeData.cashierUpgrade.UpgradeLevel + 1, "Burger", content);
+
+            if (_persistentProgressService.Progress.upgradeData.chefUpgrade.UpgradeLevel < ChefUpgradeData.MaxLevel)
+                CreateUpgradeItem(_persistentProgressService.Progress.upgradeData.chefUpgrade.UpgradeLevel + 1, "Chef", content);
+            else
+                CreateUpgradeItem(ChefUpgradeData.MaxLevel, "Chef", content);
+
+            if (_persistentProgressService.Progress.upgradeData.loaderUpgrade.UpgradeLevel < LoaderUpgradeData.MaxLevel)
+                CreateUpgradeItem(_persistentProgressService.Progress.upgradeData.loaderUpgrade.UpgradeLevel + 1, "Loader", content);
+            else
+                CreateUpgradeItem(LoaderUpgradeData.MaxLevel, "Loader", content);
+
+            if (_persistentProgressService.Progress.upgradeData.cashierUpgrade.UpgradeLevel < CashierUpgradeData.MaxLevel)
+                CreateUpgradeItem(_persistentProgressService.Progress.upgradeData.cashierUpgrade.UpgradeLevel + 1, "Cashier", content);
+            else
+                CreateUpgradeItem(CashierUpgradeData.MaxLevel, "Cashier", content);
+
+            if (_persistentProgressService.Progress.upgradeData.burgerUpgrade.UpgradeLevel < BurgerUpgradeData.MaxLevel)
+                CreateUpgradeItem(_persistentProgressService.Progress.upgradeData.burgerUpgrade.UpgradeLevel + 1, "Burger", content);
+            else
+                CreateUpgradeItem(BurgerUpgradeData.MaxLevel, "Burger", content);
+
             _assets.Instantiate(AssetPath.SoonItem, content.transform);
             
         }

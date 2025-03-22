@@ -53,6 +53,7 @@ namespace Client.Infrastructure.States
             _gameFactory.CreateStorageCrate();
             _gameFactory.CreateOrderPlace();
             _gameFactory.CreateNavMesh();
+            _gameFactory.UpgradeBurgers();
         }
         private void InitHud()
         {

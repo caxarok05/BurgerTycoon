@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0f5a9bf066a2146921f7f11d70f07f, type: 3}
+  m_Name: BurgerCostData2
+  m_EditorClassIdentifier: 
+  icon: {fileID: 1478500205, guid: 02c003ee8abeb2a4eb0cd365115033f2, type: 3}
+  title: BURGER PRICE UPGRADE
+  description: 'Raises the selling price of one product. Increases the price of a
+    burger by 30% '
+  upgradeLevel: 2
+  priceUpAmount: 2
+  "\u0441ost": 1000

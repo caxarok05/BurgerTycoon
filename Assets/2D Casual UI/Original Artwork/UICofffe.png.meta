@@ -1,0 +1,1448 @@
+fileFormatVersion: 2
+guid: 1842019e35cfd524391a46916c873385
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UICofffe_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1607
+        width: 113
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14bac085c4e38e4f9572417cb4eb12d
+      internalID: 1735500619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1604
+        width: 175
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9fbe6ca5e47824fbf525e810796146
+      internalID: -1750158202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_4
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1608
+        width: 405
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 31, y: 21, z: 33, w: 16}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3f993818df0004290ea6c50caf55d6
+      internalID: -327180737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_5
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 185
+        width: 674
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 140, y: 0, z: 138, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f3f8e867c6d4343ab65ce1d3cb3958
+      internalID: 2043518725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_7
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 1517
+        width: 179
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb755324b0726b047b730cc94e222f16
+      internalID: 1354297299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1518
+        width: 167
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab0ed83fa7a5b84585044dca172cf64
+      internalID: 842482618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_9
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1518
+        width: 169
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe4b594add0f9545ad417c202eaa5e6
+      internalID: -1601002339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_10
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1535
+        width: 209
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875e59c67d96a8443bafac9da1c8f2a2
+      internalID: 239010282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_11
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 1535
+        width: 202
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c044d457284c2154c9caf92488089661
+      internalID: 175471834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_13
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1609
+        width: 107
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f895e3bbbe1278a44a2356551b364694
+      internalID: 2134070797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_22
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 1458
+        width: 396
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 19, y: 39, z: 19, w: 27}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522dd834a4df1b343b11b2cb5e12bc86
+      internalID: 473534857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_23
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1519
+        width: 124
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64bda985f88cb2548aae7e346dabb73b
+      internalID: 969042359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_26
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 1510
+        width: 286
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3677d6b4f2a7234fa98f47ad3bf76ad
+      internalID: -480361220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_27
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 1538
+        width: 304
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e09cbfb07d0485479dd5b3dde4caa36
+      internalID: -1511747845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_28
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 1528
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548988a8267f96248ba5ad9bae739913
+      internalID: -721810599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_30
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 1480
+        width: 314
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f230bcb24f682164a9e3c5590dd33329
+      internalID: 1744397357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_33
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1322
+        width: 185
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2106d3501f4926641b6e1178ab0befdd
+      internalID: 1792080940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_34
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1321
+        width: 188
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952a92e53d14a5d4cb182ab667e7cf0d
+      internalID: 1599585932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_35
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1312
+        width: 206
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e8c66deead3f2459391c0f85c5b949
+      internalID: 574940739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_36
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 528
+        width: 1398
+        height: 931
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b4c1ea18f60b943a75825182ab50c9
+      internalID: -1750264379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_38
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1123
+        width: 186
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988fafe0b53d8c84ba7eed52209a3a68
+      internalID: 830056539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_40
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1123
+        width: 191
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f534c86ddc431408ba79efa1f07930
+      internalID: 1129471782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_42
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1123
+        width: 163
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e11506d15045314fbd65e0cefaf09f6
+      internalID: -196598452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_53
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 986
+        width: 120
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8c10a0b33f63c4ba874ca0fa5c2c5c
+      internalID: -801725446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_54
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 978
+        width: 100
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33e28d983316144089c6aa7a1927fef
+      internalID: -922336557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_55
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 978
+        width: 107
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78957135871ee2e4e8ee52ae4679e69e
+      internalID: -781922863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_56
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 986
+        width: 138
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c410ca24019dfb4087cccb965fcfed0
+      internalID: -1624130996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_57
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 831
+        width: 75
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf6d7e39cd42aa45a0a02f8b326f9b3
+      internalID: -1972372486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_58
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 834
+        width: 92
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d98b7cd674c6204baa60e4ea4368915
+      internalID: 547619597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_59
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 837
+        width: 128
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb85022a85cd59d458975b52d2db9513
+      internalID: -282798422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_60
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 840
+        width: 115
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d12a1682e87fe34785ac90f7857d07e
+      internalID: -1700149934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_61
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 671
+        width: 68
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b2d96a71b64a344825779b152439a9
+      internalID: 1171676640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_62
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 667
+        width: 140
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaffa1dea0ef43a4bbb373fa1f891ccf
+      internalID: 1634071258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_63
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 678
+        width: 126
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2035f4ad68e0215438461acdbd80113c
+      internalID: 526574072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_64
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 678
+        width: 137
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f51e166bd487a2449e505862a31d96f
+      internalID: -657743783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_65
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 530
+        width: 80
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156b3dce10808124b94462ad5e1370fd
+      internalID: 591471982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_66
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 520
+        width: 100
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0354eecb3b653434080828b4b4450f73
+      internalID: -1191824016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_67
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 530
+        width: 124
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0c1f1f8c7025e468baf4a0175ff96c
+      internalID: 1670867628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_68
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 521
+        width: 129
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a3a31462959b0458e164d2ce61478f
+      internalID: 1979636670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_71
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 352
+        width: 93
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ba1a11c9d783446970e61f9c755c07
+      internalID: -398018431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_72
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 368
+        width: 133
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e95a36a3c7c8c4ba4bc59547b34298
+      internalID: -2139153400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_73
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 360
+        width: 145
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ca2933f4b1c784483e92ba88df7a35
+      internalID: 1542446294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_74
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 360
+        width: 86
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1365e3d610130814088e86581008ccd3
+      internalID: -864234531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_75
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 154
+        width: 1297
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fbdda4c3d161640a61ba94e16c0535
+      internalID: 486303732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_76
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 221
+        width: 114
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8609b51b45105cf4093361668501774e
+      internalID: 112516756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_77
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 248
+        width: 104
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4e5b3d1d1913748a72917dd94a2270
+      internalID: 732379334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_78
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 223
+        width: 129
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3563f1b29bdb7084786e6c5e5127ba1b
+      internalID: -1158664216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_79
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 223
+        width: 123
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2cd95c8645c6643b3dc363e7c0c448
+      internalID: -135526072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_82
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 77
+        width: 50
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c29f67ae3784148a8417f8e2695f94
+      internalID: -1274468617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_83
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 74
+        width: 129
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5868928d8105be043b7391d4e629bdaa
+      internalID: 1441768784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_84
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 74
+        width: 108
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d698e3878b74b4248bd6873b49d35510
+      internalID: -198156779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_85
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 75
+        width: 105
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacf47155d55bd84284d21ef7be7e6f0
+      internalID: -1337505470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_87
+      rect:
+        serializedVersion: 2
+        x: 2152
+        y: 8
+        width: 673
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 138, y: 0, z: 140, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8185383bbac884f8e5e57e8ec72102
+      internalID: 509766907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_37
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 387
+        width: 267
+        height: 268
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b910fa123daf1f4094f27b1456e41ae
+      internalID: -534285533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_39
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 390
+        width: 265
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955e1af3356a4fb4786815704cf0ffab
+      internalID: 2040223553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_41
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 662
+        width: 617
+        height: 798
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 30, y: 41, z: 34, w: 31}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdcbbfa09e19854eb6b9f2b86edd06d
+      internalID: -1568485985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_43
+      rect:
+        serializedVersion: 2
+        x: 2195
+        y: 1466
+        width: 392
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4aaa4d399104854ea25b347c1b55757
+      internalID: 1212482741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICofffe_44
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1613
+        width: 392
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 16, y: 16, z: 16, w: 16}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226514e3365edd442a10fdd72fb271bb
+      internalID: 1359897993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      UICofffe_0: -906479014
+      UICofffe_1: 1735500619
+      UICofffe_10: 239010282
+      UICofffe_11: 175471834
+      UICofffe_12: -1239521626
+      UICofffe_13: 2134070797
+      UICofffe_14: -1440692602
+      UICofffe_15: 811190901
+      UICofffe_16: 908607755
+      UICofffe_17: -1630805292
+      UICofffe_18: 382346042
+      UICofffe_19: 1414397162
+      UICofffe_2: -1750158202
+      UICofffe_20: 1638736830
+      UICofffe_21: -303631541
+      UICofffe_22: 473534857
+      UICofffe_23: 969042359
+      UICofffe_24: -1307285196
+      UICofffe_25: -1525782264
+      UICofffe_26: -480361220
+      UICofffe_27: -1511747845
+      UICofffe_28: -721810599
+      UICofffe_29: 289574770
+      UICofffe_3: 62974764
+      UICofffe_30: 1744397357
+      UICofffe_31: 1761274284
+      UICofffe_32: 837690212
+      UICofffe_33: 1792080940
+      UICofffe_34: 1599585932
+      UICofffe_35: 574940739
+      UICofffe_36: -1750264379
+      UICofffe_37: -534285533
+      UICofffe_38: 830056539
+      UICofffe_39: 2040223553
+      UICofffe_4: -327180737
+      UICofffe_40: 1129471782
+      UICofffe_41: -1568485985
+      UICofffe_42: -196598452
+      UICofffe_43: 1212482741
+      UICofffe_44: 1359897993
+      UICofffe_45: -511157104
+      UICofffe_46: 842803828
+      UICofffe_47: 2062479966
+      UICofffe_48: -388487048
+      UICofffe_49: 904437238
+      UICofffe_5: 2043518725
+      UICofffe_50: -1229730532
+      UICofffe_51: 1161057793
+      UICofffe_52: -1377800215
+      UICofffe_53: -801725446
+      UICofffe_54: -922336557
+      UICofffe_55: -781922863
+      UICofffe_56: -1624130996
+      UICofffe_57: -1972372486
+      UICofffe_58: 547619597
+      UICofffe_59: -282798422
+      UICofffe_6: -1964231694
+      UICofffe_60: -1700149934
+      UICofffe_61: 1171676640
+      UICofffe_62: 1634071258
+      UICofffe_63: 526574072
+      UICofffe_64: -657743783
+      UICofffe_65: 591471982
+      UICofffe_66: -1191824016
+      UICofffe_67: 1670867628
+      UICofffe_68: 1979636670
+      UICofffe_69: -197912901
+      UICofffe_7: 1354297299
+      UICofffe_70: -195223321
+      UICofffe_71: -398018431
+      UICofffe_72: -2139153400
+      UICofffe_73: 1542446294
+      UICofffe_74: -864234531
+      UICofffe_75: 486303732
+      UICofffe_76: 112516756
+      UICofffe_77: 732379334
+      UICofffe_78: -1158664216
+      UICofffe_79: -135526072
+      UICofffe_8: 842482618
+      UICofffe_80: 1460965315
+      UICofffe_81: 1759697052
+      UICofffe_82: -1274468617
+      UICofffe_83: 1441768784
+      UICofffe_84: -198156779
+      UICofffe_85: -1337505470
+      UICofffe_86: 2002970631
+      UICofffe_87: 509766907
+      UICofffe_88: -229242010
+      UICofffe_89: -1140289708
+      UICofffe_9: -1601002339
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

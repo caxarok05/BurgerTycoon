@@ -84,7 +84,7 @@ public class CustomerQueue : MonoBehaviour
                 customer.gameObject.GetComponent<DestinationTracker>().OnDestinationReached += customer.LookAtPoint;
                     
             }
-            else if(!customer.reachDestination) 
+            else if(!customer.reachDestination)
             {
                 customer.agent.SetDestination(orderPlace.queueStartPoint.position);
                 customer.gameObject.GetComponent<WalkableAnimator>().StartWalking();
@@ -99,6 +99,7 @@ public class CustomerQueue : MonoBehaviour
     }
     private void DeleteCustomer(CustomerBehaviour customer)
     {
+        factory.customers.Remove(customer.gameObject);
         customer.GetComponent<DestinationTracker>().OnDestinationReached -= () => DeleteCustomer(customer);
         if (customersSpawner.customersCount > 0)
             customersSpawner.customersCount--;

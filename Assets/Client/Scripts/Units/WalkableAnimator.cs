@@ -15,14 +15,36 @@ namespace Client.Units
             _animator = GetComponent<Animator>();
         }
 
-        public void SetIdle() => _animator.SetTrigger(Idle);
+        public void SetIdle()
+        {
+            //if (!IsCurrentAnimation("Idle"))
+            //{
+                _animator.ResetTrigger(Moving);
+                _animator.SetTrigger(Idle);
+            //}
+        }
 
-        public void StartWorking() => _animator.SetTrigger(Working);
+        public void StartWorking()
+        {
+            if (!IsCurrentAnimation("Working"))
+            {
+                _animator.SetTrigger(Working);
+            }
+        }
 
         public void StartWalking()
         {
-            _animator.ResetTrigger(Idle);
-            _animator.SetTrigger(Moving);
+            if (!IsCurrentAnimation("Moving"))
+            {
+                _animator.ResetTrigger(Idle);
+                _animator.SetTrigger(Moving);
+            }
+        }
+
+        private bool IsCurrentAnimation(string animationName)
+        {
+            var stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+            return stateInfo.IsName(animationName);
         }
     }
 }

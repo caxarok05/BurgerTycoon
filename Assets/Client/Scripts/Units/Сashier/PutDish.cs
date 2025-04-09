@@ -14,6 +14,11 @@ namespace Client.Units.Cashier
         public Image deliveryProgressImage;
         public Image deliveryProgressObject;
 
+        public void UpgradeServingTime(float amount)
+        {
+            takingTime = amount;
+            givingTime = amount;
+        }
         public async Task GiveOrder()
         {
 
@@ -35,11 +40,17 @@ namespace Client.Units.Cashier
 
         }
 
-        public async Task TakeDish(ChefTable table)
+        public async Task TakeDish(ChefTable table, WalkableAnimator animator)
         {
-            float elapsedTime = 0f;
+            while (table._cookedDishes < oneTimeDishTaken)
+            {    
+                animator.SetIdle();
+                await Task.Yield();
+            }
+            animator.StartWorking();
             deliveryProgressObject.gameObject.SetActive(true);
             UpdateDeliveryProgress(0f);
+            float elapsedTime = 0f;
 
             while (elapsedTime < takingTime)
             {

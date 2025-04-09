@@ -47,6 +47,22 @@ namespace Client.Infrastructure.States
             progress.upgradeData.cashierUpgrade.UpgradeLevel = 1;
             progress.upgradeData.burgerUpgrade.UpgradeLevel = 1;
 
+            progress.upgradeData.timeUpgrade.UpgradeLevel = 0;
+
+            progress.upgradeData.cashierSpeedUpgrade.UpgradeLevel = 0;
+            progress.upgradeData.loaderSpeedUpgrade.UpgradeLevel = 0;
+            progress.upgradeData.customerSpeedUpgrade.UpgradeLevel = 0;
+
+            progress.upgradeData.loaderMaxIngridientsUpgrade.UpgradeLevel = 0;
+            progress.upgradeData.chefMaxIngridientsUpgrade.UpgradeLevel = 0;
+            progress.upgradeData.chefMaxDishesUpgrade.UpgradeLevel = 0;
+
+            progress.upgradeData.LoaderOneTimeDeliverUpgrade.UpgradeLevel = 0;
+            progress.upgradeData.chefOneTimeCookedUpgrade.UpgradeLevel = 0;
+            
+            progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel = 0;
+            progress.upgradeData.chefCookingTimeUpgrade.UpgradeLevel = 0;
+
             return progress;
         }
     }

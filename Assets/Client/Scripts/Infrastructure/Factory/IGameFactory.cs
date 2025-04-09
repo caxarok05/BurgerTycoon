@@ -14,6 +14,7 @@ namespace Client.Infrastructure.Factory
         List<GameObject> loaderCrates { get; }
         List<GameObject> cashierPoints { get; }
         List<Transform> customerPoints { get; }
+        List<GameObject> customers { get; }
 
         void Cleanup();
 
@@ -34,5 +35,16 @@ namespace Client.Infrastructure.Factory
         void UpgradeLoaders();
         void UpgradeCashiers();
         void UpgradeBurgers();
+        void UpgradeTimeBooster();
+        void UpgradeCustomerSpeed();
+        void UpgradeLoaderSpeed();
+        void UpgradeCashierSpeed();
+        void UpgradeLoaderMaxIngridients();
+        void UpgradeChefMaxDishes();
+        void UpgradeChefMaxIngridients();
+        void UpgradeLoaderOneTimeDeliver();
+        void UpgradeChefOneTimeCooked();
+        void UpgradeCashierServingTime();
+        void UpgradeChefCookingTime();
     }
 }

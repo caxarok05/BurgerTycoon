@@ -1,8 +1,4 @@
-﻿
-
-using UnityEngine;
-
-namespace Client.Units.Cashier.StateMachine
+﻿namespace Client.Units.Cashier.StateMachine
 {
     public class GiveOrderState : ICashierState
     {

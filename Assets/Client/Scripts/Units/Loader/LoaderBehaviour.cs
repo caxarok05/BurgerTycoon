@@ -47,6 +47,8 @@ namespace Client.Units.Loader
             }
             return false;
         }
+
+        public void UpgradeOneTimedeliver(int oneTime) => oneTimeIngridientsDeliver = oneTime;
     }
 
     

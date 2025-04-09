@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: 1478500205, guid: 02c003ee8abeb2a4eb0cd365115033f2, type: 3}
   title: BURGER PRICE UPGRADE
   description: 'Raises the selling price of one product. Increases the price of a
-    burger by 30% '
+    burger by 10% '
   upgradeLevel: 2
   priceUpAmount: 2
   "\u0441ost": 1000

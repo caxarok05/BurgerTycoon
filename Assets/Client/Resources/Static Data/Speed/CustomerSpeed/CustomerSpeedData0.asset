@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18aa62fad2f0c24cb63b03d38b8d0a6, type: 3}
+  m_Name: CustomerSpeedData0
+  m_EditorClassIdentifier: 
+  icon: {fileID: -2007608820, guid: 4143109f87c896a42b15361fd0d07644, type: 3}
+  title: CUSTOMER SPEED MULTIPLIER
+  description: Increases the customer's movement speed, allowing for quicker navigation.
+  upgradeLevel: 0
+  customerSpeed: 3.5
+  "\u0441ost": 0

@@ -33,9 +33,8 @@ namespace Client.Units.Chef
         {
             if (chef.IsEnoughIngridients(_ingridientsAmount) && _cookedDishes < _maxCooked)
             {
-                _ingridientsAmount -= chef.ingridientsRequired;
                 _cookedDishes += await chef.StartCooking();
-
+                _ingridientsAmount -= chef.ingridientsRequired;
                 if (_cookedDishes > _maxCooked)
                     _cookedDishes = _maxCooked;
 
@@ -56,6 +55,10 @@ namespace Client.Units.Chef
             }
             _ingridientsAmount += amount;
         }
+
+        public void UpgradeMaxIngridients(int amount) => _maxIngridients = amount;
+
+        public void UpgradeMaxCooked(int amount) => _maxCooked = amount;
 
     }
 }

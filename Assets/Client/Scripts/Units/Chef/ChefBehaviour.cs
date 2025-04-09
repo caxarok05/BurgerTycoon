@@ -37,6 +37,9 @@ namespace Client.Units.Chef
             return false;
         }
 
+        public void UpgradeOneTimeCooked(int amount) => oneTimeDishesCooked = amount;
+        public void UpgradeCookingTime(float amount) => cookingTime = amount;
+
         private async Task CookAsync(float time)
         {
             float elapsedTime = 0f;

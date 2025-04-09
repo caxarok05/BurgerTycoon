@@ -34,6 +34,11 @@ namespace Client.Units.Loader
             destinationTables = destination;
         }
 
+        public void UpdateloaderSpeed(float speed) => loader.agent.speed = speed;
+
+        public void UpgradeMaxIngridients(int maxIngridients) => _maxIngridients = maxIngridients;
+
+
         private void Start()
         {
             stateMachine = new LoaderStateMachine(loader, this, loader.gameObject.GetComponent<WalkableAnimator>());       

@@ -1,5 +1,6 @@
 using Client.Infrastructure.Factory;
 using Client.Services;
+using Client.Units;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class CustomersSpawner : MonoBehaviour
 
     public int minTimeDelay = 5;
     public int maxTimeDelay = 10;
+
+    public float _speed = 1;
 
     private IGameFactory _gameFactory;
 
@@ -36,6 +39,7 @@ public class CustomersSpawner : MonoBehaviour
             timeDelay = Random.Range(minTimeDelay, maxTimeDelay);
         }
     }
+    public void ChangeSpeed(float speed) => _speed = speed;
 
     public void SpawnCustomer()
     {
@@ -43,6 +47,7 @@ public class CustomersSpawner : MonoBehaviour
              return;
 
         GameObject customer = _gameFactory.CreateRandomCustomer();
+        customer.GetComponent<Unit>().agent.speed = _speed; 
         queue.CheckCustomers(customer.GetComponent<CustomerBehaviour>());
         customersCount++;
     }

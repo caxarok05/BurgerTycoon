@@ -21,7 +21,7 @@ namespace Client.Units.Cashier
 
         public CustomerQueue customerQueue;
 
-        private CashierBehaviour cashier;
+        public CashierBehaviour cashier;
         private List<ChefTable> destinationTables = new List<ChefTable>();
 
         private CashierStateMachine stateMachine;
@@ -119,6 +119,8 @@ namespace Client.Units.Cashier
             _moneyService.AddMoney(BurgerPrice);
             customerQueue.CustomerGetOut();
         }
+
+        public void UpdateCashierSpeed(float speed) => cashier.agent.speed = speed;
 
     }
 }

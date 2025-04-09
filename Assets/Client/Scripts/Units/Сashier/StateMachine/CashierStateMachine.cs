@@ -7,7 +7,7 @@ namespace Client.Units.Cashier.StateMachine
     {
         private Dictionary<Type, IExitableCashierState> _states;
 
-       /* private */ public IExitableCashierState _activeState;
+        private IExitableCashierState _activeState;
 
         public CashierStateMachine(CashierBehaviour cashier, OrderPlace orderPlace, WalkableAnimator animator)
         {

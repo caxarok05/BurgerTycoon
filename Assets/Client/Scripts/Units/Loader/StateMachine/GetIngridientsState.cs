@@ -29,9 +29,9 @@ namespace Client.Units.Loader.StateMachine
         private async void GetIngridients()
         {
             _loader.gameObject.GetComponent<DestinationTracker>().OnDestinationReached -= GetIngridients;
-            _animator.StartWorking();
             _loader.gameObject.transform.LookAt(_storageCrate.lookAtPoint);
-            await _loader.gameObject.GetComponent<PutDelivery>().TakeDelivery(_storageCrate);
+
+            await _loader.gameObject.GetComponent<PutDelivery>().TakeDelivery(_storageCrate, _animator);
             _loader.hasWeight = true;
             _loader.isFree = true;
         }

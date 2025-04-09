@@ -37,7 +37,7 @@ namespace Client.Logic.EntityUpgrade
 
         public IUpgradeStaticData GetNewData()
         {
-            if (_progressService.Progress.upgradeData.burgerUpgrade.UpgradeLevel + 1 > CashierUpgradeData.MaxLevel)
+            if (_progressService.Progress.upgradeData.burgerUpgrade.UpgradeLevel + 1 > BurgerUpgradeData.MaxLevel)
             {
                 return _staticDataService.ForBurgers(_progressService.Progress.upgradeData.burgerUpgrade.UpgradeLevel);
             }

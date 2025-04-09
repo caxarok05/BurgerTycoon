@@ -6,6 +6,7 @@ using Client.Services.PersistentProgress;
 using Client.Services.Randomizer;
 using Client.Services.SaveLoad;
 using Client.Services.StaticData;
+using Client.Services.TimeService;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,6 +40,7 @@ namespace Client.Infrastructure.States
         {
             RegisterStaticDataService();
             _services.RegisterSingle<IRandomService>(new RandomService());
+            _services.RegisterSingle<ITimeController>(new TimeController());
             _services.RegisterSingle<IAssetProvider>(new AssetProvider());
             _services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
             _services.RegisterSingle<IMoneyService>(new MoneyService(_services.Single<IPersistentProgressService>()));
@@ -47,7 +49,8 @@ namespace Client.Infrastructure.States
                 _services.Single<IAssetProvider>(), 
                 _services.Single<IPersistentProgressService>(), 
                 _services.Single<IMoneyService>(), 
-                _services.Single<IStaticDataService>())
+                _services.Single<IStaticDataService>(),
+                _services.Single<ITimeController>())
             );
 
             _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IPersistentProgressService>(), _services.Single<IGameFactory>()));

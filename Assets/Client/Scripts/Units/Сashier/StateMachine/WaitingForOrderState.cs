@@ -1,6 +1,4 @@
-﻿
-
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Client.Units.Cashier.StateMachine
 {

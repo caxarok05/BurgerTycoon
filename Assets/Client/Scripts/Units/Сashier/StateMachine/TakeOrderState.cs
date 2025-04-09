@@ -33,8 +33,7 @@ namespace Client.Units.Cashier.StateMachine
         {
             _cashier.destinationTracker.OnDestinationReached -= ReachChefTable;
             _cashier.gameObject.transform.LookAt(_currentTable.takeOrderPlace.position);
-            _animator.StartWorking();
-            await _cashier.gameObject.GetComponent<PutDish>().TakeDish(_currentTable);
+            await _cashier.gameObject.GetComponent<PutDish>().TakeDish(_currentTable, _animator);
 
             _cashier.hasWeight = true;
             _cashier.isFree = true;

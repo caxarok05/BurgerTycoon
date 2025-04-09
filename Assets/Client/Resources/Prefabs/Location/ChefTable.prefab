@@ -54,12 +54,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chef: {fileID: 0}
   _cookedDishes: 0
-  _ingridientsAmount: 4
+  _ingridientsAmount: 1
   chefPlace: {fileID: 5552772333020019480}
   deliveryPlace: {fileID: 1759871681908915209}
   takeOrderPlace: {fileID: 1194214000049654993}
   _maxCooked: 6
   _maxIngridients: 6
+  isOccupiedbyLoader: 0
+  isOccupiedbyCashier: 0
 --- !u!114 &2416541078630344204
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -31,13 +31,19 @@ namespace Client.Units.Loader
             deliveryProgressObject.gameObject.SetActive(false);
         }
 
-        public async Task TakeDelivery(StorageCrate crate)
+        public async Task TakeDelivery(StorageCrate crate, WalkableAnimator animator)
         {
+            while (crate.currentIngridients < oneTimeIngridentsDeliver)
+            {
+                animator.SetIdle();
+                await Task.Yield();
+            }
+            animator.StartWorking();
+
             deliveryProgressObject.gameObject.SetActive(true);
             UpdateDeliveryProgress(0f);
             await DeliveryTimePassage();
-
-            if (crate.currentIngridients > oneTimeIngridentsDeliver)
+            if (crate.currentIngridients >= oneTimeIngridentsDeliver)
                 crate.currentIngridients -= oneTimeIngridentsDeliver;
 
             UpdateDeliveryProgress(1f);

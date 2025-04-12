@@ -121,6 +121,7 @@ namespace Client.Units.Cashier
         }
 
         public void UpdateCashierSpeed(float speed) => cashier.agent.speed = speed;
+        public void BonusSpeed(float multiplier) => cashier.agent.speed *= multiplier;
 
     }
 }

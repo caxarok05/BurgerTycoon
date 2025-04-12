@@ -1,5 +1,7 @@
+using Client.Logic.EntityUpgrade;
 using Client.Services;
 using Client.Services.PersistentProgress;
+using Client.UI;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +17,7 @@ namespace Client.Infrastructure.Factory
         List<GameObject> cashierPoints { get; }
         List<Transform> customerPoints { get; }
         List<GameObject> customers { get; }
+        List<UpgradeItemConfigurator> Upgrades { get; }
 
         void Cleanup();
 
@@ -46,5 +49,8 @@ namespace Client.Infrastructure.Factory
         void UpgradeChefOneTimeCooked();
         void UpgradeCashierServingTime();
         void UpgradeChefCookingTime();
+        void UpgradeLoaderIngridientsRecharge();
+        void BonusSpeed(float multiplier);
+        void GoldenBurger(float multiplier);
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 85edabbe640c11647b4381cd77a15969, type: 3}
   title: INCREASE COOKING SPEED
-  description: 
+  description: Increase speed of making one product.
   upgradeLevel: 2
   cookingTime: 5
   "\u0441ost": 2000

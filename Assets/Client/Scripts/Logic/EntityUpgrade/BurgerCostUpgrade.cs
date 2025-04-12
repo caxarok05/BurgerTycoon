@@ -48,5 +48,15 @@ namespace Client.Logic.EntityUpgrade
         {
             return _progressService.Progress.upgradeData.burgerUpgrade.UpgradeLevel;
         }
+
+        public int ReturnMaxLevel()
+        {
+            return BurgerUpgradeData.MaxLevel;
+        }
+
+        public int GetUpgradeCost()
+        {
+            return _staticDataService.ForBurgers(_progressService.Progress.upgradeData.burgerUpgrade.UpgradeLevel + 1).Cost;
+        }
     }
 }

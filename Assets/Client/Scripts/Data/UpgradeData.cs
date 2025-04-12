@@ -23,7 +23,8 @@ namespace Client.Data
         public LoaderOneTimeDeliverUpgradeData LoaderOneTimeDeliverUpgrade;
 
         public ChefCookingTimeUpgradeData chefCookingTimeUpgrade;
-        public CashierServingTimeUpgradeData cashirServingTimeUpgrade;
+        public CashierServingTimeUpgradeData cashierServingTimeUpgrade;
+        public LoaderIngridientsRechargeUpgradeData loaderIngridentsRechargeUpgrade;
 
         public UpgradeData()
         {
@@ -46,7 +47,8 @@ namespace Client.Data
             LoaderOneTimeDeliverUpgrade = new LoaderOneTimeDeliverUpgradeData();
 
             chefCookingTimeUpgrade = new ChefCookingTimeUpgradeData();
-            cashirServingTimeUpgrade = new CashierServingTimeUpgradeData();
+            cashierServingTimeUpgrade = new CashierServingTimeUpgradeData();
+            loaderIngridentsRechargeUpgrade = new LoaderIngridientsRechargeUpgradeData();
         }
     }
 }

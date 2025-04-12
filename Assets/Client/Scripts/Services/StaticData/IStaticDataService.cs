@@ -1,4 +1,4 @@
-﻿using Client.Services.StaticData;
+﻿using Client.Logic.BonusSystem;
 using Client.StaticData;
 
 namespace Client.Services.StaticData
@@ -21,5 +21,7 @@ namespace Client.Services.StaticData
         LoaderOneTimeDeliverStaticData ForLoaderOneTimeDeliver(int upgradeLevel);
         CashierServingTimeStaticData ForCashierServingTime(int upgradeLevel);
         ChefCookingTimeStaticData ForChefCookingTime(int upgradeLevel);
+        LoaderIngridiensRechargeStaticData ForLoaderIngridientsRecharge(int upgradeLevel);
+        BonusStaticData ForBonus(BonusType bonusType);
     }
 }

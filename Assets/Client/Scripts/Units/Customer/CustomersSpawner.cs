@@ -12,15 +12,15 @@ public class CustomersSpawner : MonoBehaviour
     public int customersCount = 0;
     public int maxCustomers = 3;
 
-    public int minTimeDelay = 5;
-    public int maxTimeDelay = 10;
+    public float minTimeDelay = 5;
+    public float maxTimeDelay = 10;
 
     public float _speed = 1;
 
     private IGameFactory _gameFactory;
 
     private float timer;
-    private int timeDelay;
+    private float timeDelay;
 
     private void Start()
     {
@@ -40,6 +40,7 @@ public class CustomersSpawner : MonoBehaviour
         }
     }
     public void ChangeSpeed(float speed) => _speed = speed;
+    public void BonusSpeed(float multiplier) => _speed *= multiplier;
 
     public void SpawnCustomer()
     {

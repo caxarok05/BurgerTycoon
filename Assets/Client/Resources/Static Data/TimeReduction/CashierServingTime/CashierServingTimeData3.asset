@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 2bfcb2984fdf24f49a86ee8adbb120ed, type: 3}
   title: INCREASE SERVING SPEED
-  description: 
+  description: Increase speed of taking burger and serving customer.
   upgradeLevel: 3
   servingTime: 2
   "\u0441ost": 2000

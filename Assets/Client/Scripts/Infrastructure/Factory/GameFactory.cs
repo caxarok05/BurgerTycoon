@@ -40,6 +40,8 @@ namespace Client.Infrastructure.Factory
         private List<Transform> _cratePoints = new List<Transform>();
         private List<Transform> _orderPoints = new List<Transform>();
 
+        public List<UpgradeItemConfigurator> Upgrades { get; private set; } = new List<UpgradeItemConfigurator>();
+
         private ChefUpgrade _chefUpgrade;
         private LoaderUpgrade _loaderUpgrade;
         private CashierUpgrade _cashierUpgrade;
@@ -60,6 +62,8 @@ namespace Client.Infrastructure.Factory
 
         private ChefCookingTimeUpgrade _chefCookingTimeUpgrade;
         private CashierServingTimeUpgrade _cashierServingTimeUpgrade;
+        private LoaderIngridientsRechargeUpgrade _loaderIngridientsRecharge;
+
 
         private GameObject _navMesh;
         private GameObject _hud;
@@ -145,6 +149,7 @@ namespace Client.Infrastructure.Factory
                 crate.GetComponent<StorageCrate>().UpdateloaderSpeed(_staticDataService.ForLoaderSpeed(_persistentProgressService.Progress.upgradeData.loaderSpeedUpgrade.UpgradeLevel).loaderSpeed);
                 crate.GetComponent<StorageCrate>().UpgradeMaxIngridients(_staticDataService.ForLoaderMaxIngridients(_persistentProgressService.Progress.upgradeData.loaderMaxIngridientsUpgrade.UpgradeLevel).maxIngridients);
                 crate.GetComponent<StorageCrate>().loader.UpgradeOneTimedeliver(_staticDataService.ForLoaderOneTimeDeliver(_persistentProgressService.Progress.upgradeData.LoaderOneTimeDeliverUpgrade.UpgradeLevel).oneTimeDeliver);
+                crate.GetComponent<StorageCrate>().UpgradeRechargeCooldown(_staticDataService.ForLoaderIngridientsRecharge(_persistentProgressService.Progress.upgradeData.loaderIngridentsRechargeUpgrade.UpgradeLevel).rechargeTime);
             }
         }
 
@@ -167,6 +172,7 @@ namespace Client.Infrastructure.Factory
             crate.GetComponent<StorageCrate>().UpdateloaderSpeed(_staticDataService.ForLoaderSpeed(_persistentProgressService.Progress.upgradeData.loaderSpeedUpgrade.UpgradeLevel).loaderSpeed);
             crate.GetComponent<StorageCrate>().UpgradeMaxIngridients(_staticDataService.ForLoaderMaxIngridients(_persistentProgressService.Progress.upgradeData.loaderMaxIngridientsUpgrade.UpgradeLevel).maxIngridients);
             crate.GetComponent<StorageCrate>().loader.UpgradeOneTimedeliver(_staticDataService.ForLoaderOneTimeDeliver(_persistentProgressService.Progress.upgradeData.LoaderOneTimeDeliverUpgrade.UpgradeLevel).oneTimeDeliver);
+            crate.GetComponent<StorageCrate>().UpgradeRechargeCooldown(_staticDataService.ForLoaderIngridientsRecharge(_persistentProgressService.Progress.upgradeData.loaderIngridentsRechargeUpgrade.UpgradeLevel).rechargeTime);
             UpdateNavMesh();
         }
 
@@ -190,7 +196,7 @@ namespace Client.Infrastructure.Factory
 
                 orderPlace.GetComponent<OrderPlace>().Construct(table, cashier.GetComponent<CashierBehaviour>(), _moneyService);
                 orderPlace.GetComponent<OrderPlace>().UpdateCashierSpeed(_staticDataService.ForCashierSpeed(_persistentProgressService.Progress.upgradeData.cashierSpeedUpgrade.UpgradeLevel).cashierSpeed);
-                orderPlace.GetComponent<OrderPlace>().cashier.putDish.UpgradeServingTime(_staticDataService.ForCashierServingTime(_persistentProgressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel).servingTime);
+                orderPlace.GetComponent<OrderPlace>().cashier.putDish.UpgradeServingTime(_staticDataService.ForCashierServingTime(_persistentProgressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel).servingTime);
             }
         }
 
@@ -212,7 +218,7 @@ namespace Client.Infrastructure.Factory
 
             orderPlace.GetComponent<OrderPlace>().Construct(table, cashier.GetComponent<CashierBehaviour>(), _moneyService);
             orderPlace.GetComponent<OrderPlace>().UpdateCashierSpeed(_staticDataService.ForCashierSpeed(_persistentProgressService.Progress.upgradeData.cashierSpeedUpgrade.UpgradeLevel).cashierSpeed);
-            orderPlace.GetComponent<OrderPlace>().cashier.putDish.UpgradeServingTime(_staticDataService.ForCashierServingTime(_persistentProgressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel).servingTime);
+            orderPlace.GetComponent<OrderPlace>().cashier.putDish.UpgradeServingTime(_staticDataService.ForCashierServingTime(_persistentProgressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel).servingTime);
 
             UpdateNavMesh();
         }
@@ -224,6 +230,17 @@ namespace Client.Infrastructure.Factory
                 for (int i = 0; i < _persistentProgressService.Progress.upgradeData.burgerUpgrade.UpgradeLevel; i++)
                 {
                     burger.GetComponent<OrderPlace>().BurgerPrice = (int)(burger.GetComponent<OrderPlace>().BurgerPrice * BurgerUpgradeCost); 
+                }
+            }
+        }
+
+        public void GoldenBurger(float multiplier)
+        {
+            foreach (var burger in cashierPoints)
+            {
+                for (int i = 0; i < _persistentProgressService.Progress.upgradeData.burgerUpgrade.UpgradeLevel; i++)
+                {
+                    burger.GetComponent<OrderPlace>().BurgerPrice = (int)(burger.GetComponent<OrderPlace>().BurgerPrice * multiplier);
                 }
             }
         }
@@ -253,10 +270,29 @@ namespace Client.Infrastructure.Factory
             foreach (var cashier in cashierPoints)
             {
                 cashier.GetComponent<CustomersSpawner>().ChangeSpeed(_staticDataService.ForCustomerSpeed(_persistentProgressService.Progress.upgradeData.customerSpeedUpgrade.UpgradeLevel).customerSpeed);
+
             }
             foreach (var customer in customers)
             {
                 customer.GetComponent<Unit>().agent.speed = _staticDataService.ForCustomerSpeed(_persistentProgressService.Progress.upgradeData.customerSpeedUpgrade.UpgradeLevel).customerSpeed;
+            }
+        }
+
+
+        public void BonusSpeed(float multiplier)
+        {
+            foreach (var cashier in cashierPoints)
+            {
+                cashier.GetComponent<OrderPlace>().BonusSpeed(multiplier);
+                cashier.GetComponent<CustomersSpawner>().BonusSpeed(multiplier);
+            }
+            foreach (var loader in loaderCrates)
+            {
+                loader.GetComponent<StorageCrate>().BonusSpeed(multiplier);
+            }
+            foreach (var customer in customers)
+            {
+                customer.GetComponent<Unit>().agent.speed *= multiplier;
             }
         }
 
@@ -311,7 +347,14 @@ namespace Client.Infrastructure.Factory
         {
             foreach (var point in cashierPoints)
             {
-                point.GetComponent<OrderPlace>().cashier.putDish.UpgradeServingTime(_staticDataService.ForCashierServingTime(_persistentProgressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel).servingTime);
+                point.GetComponent<OrderPlace>().cashier.putDish.UpgradeServingTime(_staticDataService.ForCashierServingTime(_persistentProgressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel).servingTime);
+            }
+        }
+        public void UpgradeLoaderIngridientsRecharge()
+        {
+            foreach (var crate in loaderCrates)
+            {
+                crate.GetComponent<StorageCrate>().UpgradeRechargeCooldown(_staticDataService.ForLoaderIngridientsRecharge(_persistentProgressService.Progress.upgradeData.loaderIngridentsRechargeUpgrade.UpgradeLevel).rechargeTime);
             }
         }
 
@@ -422,10 +465,15 @@ namespace Client.Infrastructure.Factory
             else
                 CreateUpgradeItem(ChefCookingTimeUpgradeData.MaxLevel, "ChefCookingTime", content);
 
-            if (_persistentProgressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel < CashierServingTimeUpgradeData.MaxLevel)
-                CreateUpgradeItem(_persistentProgressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel + 1, "CashierServingTime", content);
+            if (_persistentProgressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel < CashierServingTimeUpgradeData.MaxLevel)
+                CreateUpgradeItem(_persistentProgressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel + 1, "CashierServingTime", content);
             else
                 CreateUpgradeItem(CashierServingTimeUpgradeData.MaxLevel, "CashierServingTime", content);
+
+            if (_persistentProgressService.Progress.upgradeData.loaderIngridentsRechargeUpgrade.UpgradeLevel < LoaderIngridientsRechargeUpgradeData.MaxLevel)
+                CreateUpgradeItem(_persistentProgressService.Progress.upgradeData.loaderIngridentsRechargeUpgrade.UpgradeLevel + 1, "LoaderIngridientsRecharge", content);
+            else
+                CreateUpgradeItem(LoaderIngridientsRechargeUpgradeData.MaxLevel, "LoaderIngridientsRecharge", content);
 
             _assets.Instantiate(AssetPath.SoonItem, content.transform);
             
@@ -448,6 +496,7 @@ namespace Client.Infrastructure.Factory
             _chefOneTimeCookedUpgrade = new ChefOneTimeCookedUpgrade(this, _persistentProgressService, _staticDataService, _moneyService);
             _chefCookingTimeUpgrade = new ChefCookingTimeUpgrade(this, _persistentProgressService, _staticDataService, _moneyService);
             _cashierServingTimeUpgrade = new CashierServingTimeUpgrade(this, _persistentProgressService, _staticDataService, _moneyService);
+            _loaderIngridientsRecharge = new LoaderIngridientsRechargeUpgrade(this, _persistentProgressService, _staticDataService, _moneyService);
 
         }
 
@@ -518,7 +567,7 @@ namespace Client.Infrastructure.Factory
         public void CreateUpgradeItem(int upgradeLevel, string type, GameObject parent)
         {
             UpgradeItemConfigurator item = _assets.Instantiate(AssetPath.UpgradeItem, parent.transform).GetComponent<UpgradeItemConfigurator>();
-
+            Upgrades.Add(item);
             IUpgradeStaticData staticData = null;
 
             switch (type)
@@ -582,6 +631,10 @@ namespace Client.Infrastructure.Factory
                 case "CashierServingTime":
                     staticData = _staticDataService.ForCashierServingTime(upgradeLevel);
                     item.Construct(staticData, _cashierServingTimeUpgrade);
+                    break;
+                case "LoaderIngridientsRecharge":
+                    staticData = _staticDataService.ForLoaderIngridientsRecharge(upgradeLevel);
+                    item.Construct(staticData, _loaderIngridientsRecharge);
                     break;
             }
         }

@@ -48,5 +48,15 @@ namespace Client.Logic.EntityUpgrade
         {
             return _progressService.Progress.upgradeData.cashierUpgrade.UpgradeLevel;
         }
+
+        public int ReturnMaxLevel()
+        {
+            return CashierUpgradeData.MaxLevel;
+        }
+
+        public int GetUpgradeCost()
+        {
+            return _staticDataService.ForCashiers(_progressService.Progress.upgradeData.cashierUpgrade.UpgradeLevel + 1).Cost;
+        }
     }
 }

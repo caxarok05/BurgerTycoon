@@ -9,5 +9,7 @@ namespace Client.Logic.EntityUpgrade
         bool CanUpgrade();
         IUpgradeStaticData GetNewData();
         int ReturnRealLevel();
+        int ReturnMaxLevel();
+        int GetUpgradeCost();
     }
 }

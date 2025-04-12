@@ -58,5 +58,7 @@ namespace Client.UI
             }
 
         }
+
+        public IUpgradable GetUpgrade() => _upgradable;
     }
 }

@@ -1,10 +1,12 @@
-﻿using Client.StaticData;
+﻿using Client.Logic.BonusSystem;
+using Client.StaticData;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 namespace Client.Services.StaticData
 {
+
     public class StaticDataService : IStaticDataService
     {
         private const string ChefsDataPath = "Static Data/Chef";
@@ -26,6 +28,9 @@ namespace Client.Services.StaticData
 
         private const string CashierServingTimeDataPath = "Static Data/TimeReduction/CashierServingTime";
         private const string ChefCookingTimeDataPath = "Static Data/TimeReduction/ChefCookingTime";
+        private const string LoaderIngridientsRechargeDataPath = "Static Data/TimeReduction/IngridientsRecharge";
+
+        private const string BonusDataPath = "Static Data/Bonus";
 
         private const string LevelsDataPath = "Static Data/Levels";
 
@@ -48,6 +53,9 @@ namespace Client.Services.StaticData
 
         private Dictionary<int, CashierServingTimeStaticData> _cashierServingTime;
         private Dictionary<int, ChefCookingTimeStaticData> _chefCookingTime;
+        private Dictionary<int, LoaderIngridiensRechargeStaticData> _loaderIngridientsRecharge;
+
+        private Dictionary<BonusType, BonusStaticData> _bonus;
 
 
         public void Load()
@@ -111,6 +119,14 @@ namespace Client.Services.StaticData
             _chefCookingTime = Resources
               .LoadAll<ChefCookingTimeStaticData>(ChefCookingTimeDataPath)
               .ToDictionary(x => x.UpgradeLevel, x => x);
+
+            _loaderIngridientsRecharge = Resources
+              .LoadAll<LoaderIngridiensRechargeStaticData>(LoaderIngridientsRechargeDataPath)
+              .ToDictionary(x => x.UpgradeLevel, x => x);
+
+            _bonus = Resources
+              .LoadAll<BonusStaticData>(BonusDataPath)
+              .ToDictionary(x => x.bonusType, x => x);
         }
 
         public ChefStaticData ForChefs(int upgradeLevel) =>
@@ -181,6 +197,16 @@ namespace Client.Services.StaticData
 
         public ChefCookingTimeStaticData ForChefCookingTime(int upgradeLevel) =>
           _chefCookingTime.TryGetValue(upgradeLevel, out ChefCookingTimeStaticData staticData)
+            ? staticData
+            : null;
+
+        public LoaderIngridiensRechargeStaticData ForLoaderIngridientsRecharge(int upgradeLevel) =>
+          _loaderIngridientsRecharge.TryGetValue(upgradeLevel, out LoaderIngridiensRechargeStaticData staticData)
+            ? staticData
+            : null;
+
+        public BonusStaticData ForBonus(BonusType bonusType) =>
+          _bonus.TryGetValue(bonusType, out BonusStaticData staticData)
             ? staticData
             : null;
 

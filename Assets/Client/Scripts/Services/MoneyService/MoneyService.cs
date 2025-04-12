@@ -13,10 +13,19 @@ namespace Client.Services.MoneyService
             _persistentProgressService = progressService;
         }
 
-        public void AddMoney(int amount) => _persistentProgressService.Progress.moneyAmount += amount;
+        public void AddMoney(int amount)
+        {
+            _persistentProgressService.Progress.moneyAmount += amount;
+            if (_persistentProgressService.Progress.moneyAmount > _persistentProgressService.Progress.maxMoneyAmount)
+            {
+                _persistentProgressService.Progress.maxMoneyAmount = _persistentProgressService.Progress.moneyAmount;
+            }
+        }
 
         public void SpendMoney(int amount) => _persistentProgressService.Progress.moneyAmount -= amount;
 
         public int DisplayMoney() => (int)_persistentProgressService.Progress.moneyAmount;
+
+        public int getMaximumMoney() => (int)_persistentProgressService.Progress.maxMoneyAmount;
     }
 }

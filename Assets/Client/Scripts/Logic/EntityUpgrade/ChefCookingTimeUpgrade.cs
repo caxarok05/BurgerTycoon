@@ -48,6 +48,16 @@ namespace Client.Logic.EntityUpgrade
         {
             return _progressService.Progress.upgradeData.chefCookingTimeUpgrade.UpgradeLevel;
         }
+
+        public int ReturnMaxLevel()
+        {
+            return ChefCookingTimeUpgradeData.MaxLevel;
+        }
+
+        public int GetUpgradeCost()
+        {
+            return _staticDataService.ForChefCookingTime(_progressService.Progress.upgradeData.chefCookingTimeUpgrade.UpgradeLevel + 1).Cost;
+        }
     }
 
 }

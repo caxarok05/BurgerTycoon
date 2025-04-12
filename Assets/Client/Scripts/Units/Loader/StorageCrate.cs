@@ -3,6 +3,7 @@ using Client.Units.Loader.StateMachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Client.Units.Loader
 {
@@ -23,6 +24,9 @@ namespace Client.Units.Loader
 
         private LoaderStateMachine stateMachine;
 
+        public Image rechargeProgressImage;
+        public GameObject rechargeProgressObject;
+
         public void Construct(List<ChefTable> destination, LoaderBehaviour loader)
         {
             destinationTables = destination;
@@ -36,7 +40,10 @@ namespace Client.Units.Loader
 
         public void UpdateloaderSpeed(float speed) => loader.agent.speed = speed;
 
+        public void BonusSpeed(float multiplier) => loader.agent.speed *= multiplier;
+
         public void UpgradeMaxIngridients(int maxIngridients) => _maxIngridients = maxIngridients;
+        public void UpgradeRechargeCooldown(float cooldown) => rechargeCooldown = cooldown;
 
 
         private void Start()
@@ -46,6 +53,12 @@ namespace Client.Units.Loader
 
         private void Update()
         {
+
+            if (!isRecharging && currentIngridients < _maxIngridients)
+            {
+                StartCoroutine(RechargeIngridients());
+                isRecharging = true;
+            }
 
             if (loader.isFree)
             {
@@ -91,21 +104,22 @@ namespace Client.Units.Loader
                         }
                     }
                 }
-
-
-
-                if (!isRecharging)
-                {
-                    StartCoroutine(RechargeIngridients());
-                    isRecharging = true;
-                }
             }
         }
-        
+
 
         private IEnumerator RechargeIngridients()
         {
-            yield return new WaitForSeconds(rechargeCooldown);
+            rechargeProgressObject.SetActive(true);
+            float elapsedTime = 0f;
+
+            while (elapsedTime < rechargeCooldown)
+            {
+                elapsedTime += Time.deltaTime;
+                float progress = Mathf.Clamp(elapsedTime / rechargeCooldown, 0f, 1f);
+                UpdateRechargeProgress(progress);
+                yield return null;
+            }
 
             if (currentIngridients < _maxIngridients)
                 currentIngridients += oneTimeIngridentsRecharge;
@@ -113,8 +127,17 @@ namespace Client.Units.Loader
             if (currentIngridients > _maxIngridients)
                 currentIngridients = _maxIngridients;
 
+            UpdateRechargeProgress(1f); 
+            rechargeProgressObject.SetActive(false);
             isRecharging = false;
         }
 
+        private void UpdateRechargeProgress(float progress)
+        {
+            if (rechargeProgressImage != null)
+            {
+                rechargeProgressImage.fillAmount = progress;
+            }
+        }
     }
 }

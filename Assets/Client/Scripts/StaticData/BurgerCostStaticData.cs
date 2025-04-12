@@ -31,4 +31,6 @@ namespace Client.StaticData
         public int UpgradeLevel => upgradeLevel;
         public int MaxLevel => maxLevel;
     }
+
+    
 }

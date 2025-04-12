@@ -6,6 +6,7 @@ namespace Client.Services.MoneyService
     {
         void AddMoney(int amount);
         int DisplayMoney();
+        int getMaximumMoney();
         void SpendMoney(int amount);
     }
 }

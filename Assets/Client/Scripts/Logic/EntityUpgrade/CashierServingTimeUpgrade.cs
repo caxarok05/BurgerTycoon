@@ -25,28 +25,37 @@ namespace Client.Logic.EntityUpgrade
 
         public bool CanUpgrade()
         {
-            return _staticDataService.ForCashierServingTime(_progressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel + 1).Cost <= _moneyService.DisplayMoney();
+            return _staticDataService.ForCashierServingTime(_progressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel + 1).Cost <= _moneyService.DisplayMoney();
         }
 
         public void Upgrade()
         {
-            _moneyService.SpendMoney(_staticDataService.ForCashierServingTime(_progressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel + 1).Cost);
-            _progressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel += 1;
+            _moneyService.SpendMoney(_staticDataService.ForCashierServingTime(_progressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel + 1).Cost);
+            _progressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel += 1;
             _gameFactory.UpgradeCashierServingTime();
         }
 
         public IUpgradeStaticData GetNewData()
         {
-            if (_progressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel + 1 > CashierServingTimeUpgradeData.MaxLevel)
+            if (_progressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel + 1 > CashierServingTimeUpgradeData.MaxLevel)
             {
-                return _staticDataService.ForCashierServingTime(_progressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel);
+                return _staticDataService.ForCashierServingTime(_progressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel);
             }
-            return _staticDataService.ForCashierServingTime(_progressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel + 1);
+            return _staticDataService.ForCashierServingTime(_progressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel + 1);
         }
 
         public int ReturnRealLevel()
         {
-            return _progressService.Progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel;
+            return _progressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel;
+        }
+        public int ReturnMaxLevel()
+        {
+            return CashierServingTimeUpgradeData.MaxLevel;
+        }
+
+        public int GetUpgradeCost()
+        {
+            return _staticDataService.ForCashierServingTime(_progressService.Progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel + 1).Cost;
         }
     }
 }

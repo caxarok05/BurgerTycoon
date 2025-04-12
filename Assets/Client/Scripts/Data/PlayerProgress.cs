@@ -9,6 +9,7 @@ namespace Client.Data
     public class PlayerProgress
     {
         public float moneyAmount;
+        public float maxMoneyAmount;
         public UpgradeData upgradeData;
 
         public PlayerProgress()

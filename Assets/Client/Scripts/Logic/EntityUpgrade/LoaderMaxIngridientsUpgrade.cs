@@ -48,5 +48,15 @@ namespace Client.Logic.EntityUpgrade
         {
             return _progressService.Progress.upgradeData.loaderMaxIngridientsUpgrade.UpgradeLevel;
         }
+
+        public int ReturnMaxLevel()
+        {
+            return LoaderMaxIngridientsUpgradeData.MaxLevel;
+        }
+
+        public int GetUpgradeCost()
+        {
+            return _staticDataService.ForLoaderMaxIngridients(_progressService.Progress.upgradeData.loaderMaxIngridientsUpgrade.UpgradeLevel + 1).Cost;
+        }
     }
 }

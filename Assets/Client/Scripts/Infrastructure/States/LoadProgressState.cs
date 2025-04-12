@@ -60,8 +60,9 @@ namespace Client.Infrastructure.States
             progress.upgradeData.LoaderOneTimeDeliverUpgrade.UpgradeLevel = 0;
             progress.upgradeData.chefOneTimeCookedUpgrade.UpgradeLevel = 0;
             
-            progress.upgradeData.cashirServingTimeUpgrade.UpgradeLevel = 0;
+            progress.upgradeData.cashierServingTimeUpgrade.UpgradeLevel = 0;
             progress.upgradeData.chefCookingTimeUpgrade.UpgradeLevel = 0;
+            progress.upgradeData.loaderIngridentsRechargeUpgrade.UpgradeLevel = 0;
 
             return progress;
         }

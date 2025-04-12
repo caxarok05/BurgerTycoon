@@ -48,6 +48,16 @@ namespace Client.Logic.EntityUpgrade
         {
             return _progressService.Progress.upgradeData.timeUpgrade.UpgradeLevel;
         }
+
+        public int ReturnMaxLevel()
+        {
+            return TimeBoostUpgradeData.MaxLevel;
+        }
+
+        public int GetUpgradeCost()
+        {
+            return _staticDataService.ForTimeBooster(_progressService.Progress.upgradeData.timeUpgrade.UpgradeLevel + 1).Cost;
+        }
     }
 
 }
